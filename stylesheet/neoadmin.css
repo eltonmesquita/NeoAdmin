@@ -1,0 +1,389 @@
+/* General Style */
+
+* {
+  font-family: 'Droid Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: url(../image/bg.jpg);
+  background-size: cover;
+}
+
+/* Menu */
+
+nav [class*="icon-"] {
+  font-size: 3em;
+}
+
+nav a, nav a:visited {
+  color: #474747;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 0.9375em;
+  
+  -webkit-transition: all 600ms cubic-bezier(0.240, 0.845, 0.290, 0.900);
+  -moz-transition: all 600ms cubic-bezier(0.240, 0.845, 0.290, 0.900);
+  -ms-transition: all 600ms cubic-bezier(0.240, 0.845, 0.290, 0.900);
+  -o-transition: all 600ms cubic-bezier(0.240, 0.845, 0.290, 0.900);
+  transition: all 600ms cubic-bezier(0.240, 0.845, 0.290, 0.900);
+}
+
+nav ul {
+  background: #fff;
+  max-width: 100px;
+  list-style: none;
+  text-align: center;
+  border-radius: 8px;
+  margin: auto;
+  margin-top: 0.9375em;
+}
+
+nav ul li {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  border-bottom: #e9e9e9 1px solid;
+}
+
+nav ul li:last-child {
+  border-bottom: 0;
+}
+
+a.first-menu {
+  border-radius: 8px 8px 0 0;
+}
+
+a.last-menu {
+  border-radius: 0 0 8px 8px;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+}
+
+nav ul li ul {
+  top: 0px;
+  left: 100%;
+  margin: 0;
+  margin-left: 1px;
+  text-align: left;
+  z-index: 999;
+}
+
+.has-flyout {
+  position: relative;
+}
+
+nav ul li ul .has-flyout:after {
+  content: " ";
+  position: absolute;
+  top: 35%;
+  right: 10px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 5px 0 5px 8.7px;
+  border-color: transparent transparent transparent #acacac;
+}
+
+.has-flyout:hover > .flyout {
+  display: block;
+}
+
+ul.flyout {
+  max-width: 240px;
+  min-width: 160px;
+  border: #e9e9e9 1px solid;
+  border-radius: 0;
+}
+
+.flyout .flyout {
+  left: 100%;
+}
+
+nav a .icon-screen {
+  color: #046104;
+}
+
+nav a .icon-file-2 {
+  color: #2795b6;
+}
+
+nav a .icon-cogs{
+  color: #EB8947;
+}
+
+nav a .icon-coin {
+  color: #27B66C;
+}
+
+nav .icon-stats {
+  color: #9927B6;
+}
+
+nav a .icon-question-sign {
+  color: #EB4747;
+}
+
+nav a:hover, nav a:hover > [class*="icon-"]{
+  color: #fff!important;
+  background: #2795b6;
+}
+
+/* Header */
+
+header {
+  margin: 0.9375em 0;
+}
+
+aside {
+  float: right;
+  margin-top: 1em;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside li {
+  float: left;
+  margin-left: 15px;
+}
+
+aside li:first-child {
+  margin-left: 0;
+}
+
+aside ul li a {
+  color: #fff;
+  background: #c9452b;
+  padding: 0.9375em;
+  border-radius: 8px;
+}
+
+#store a {
+  background: #638e43;
+  color: #fff;
+}
+
+/* Content */
+
+#content {
+	background: #fff;
+  position: relative;
+	padding-bottom: 2.571em;
+	margin-bottom: 128px;
+  border-radius: 8px;
+}
+
+.box > .heading {
+  background: #504b41;
+  -webkit-border-radius: 8px 8px 0px 0px;
+  -moz-border-radius: 8px 8px 0px 0px;
+  -khtml-border-radius: 8px 8px 0px 0px;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.box > .heading h1 {
+  color: #fff;
+  font-size: 1.714em;
+}
+
+.box > .heading h1 img {
+  margin-top: 6px;
+}
+
+.box > .content {
+  padding: 1.875em;
+}
+
+.logged-off #content {
+  background: transparent;
+}
+
+.button.save, .button.cancel {
+  padding: 0.9375em;
+  border: 0;
+
+  -webkit-transition: all 600ms cubic-bezier(0.240, 0.845, 0.290, 0.900);
+  -moz-transition: all 600ms cubic-bezier(0.240, 0.845, 0.290, 0.900);
+  -ms-transition: all 600ms cubic-bezier(0.240, 0.845, 0.290, 0.900);
+  -o-transition: all 600ms cubic-bezier(0.240, 0.845, 0.290, 0.900);
+  transition: all 600ms cubic-bezier(0.240, 0.845, 0.290, 0.900);
+}
+
+.button.save {
+  background: #638e43;
+}
+
+.button.save:hover {
+  background: #73B93F;
+}
+
+.button.cancel {
+  background: #c9452b;
+}
+
+.button.cancel:hover {
+  background: #EE2700;
+}
+
+/* Breadcrumb */
+
+.breadcrumb {
+  color: #e9e9e9;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  padding: 0.975em;
+  background-color: #767066;
+  /*margin-top: -2.2em;
+  margin-right: -2.2em;
+  margin-bottom: 2.2em;
+  margin-left: -2.2em;*/
+  border: 0;
+  border-radius: 0 0 8px 8px;
+}
+
+.breadcrumb a {
+  color: #fff;
+}
+
+/* Login */
+
+.logged-off .content {
+  background: #fff;
+  border-radius: 0 0 8px 8px;
+  padding: 1.875em 1.875em 0.9375em 1.875em;
+}
+
+.logged-off .large-5 {
+  text-align: center;
+}
+
+.logged-off .heading {
+  padding: 0 0.9375em;
+}
+
+.heading h1 .icon-key {
+  color: #DFA000;
+  padding-right: 5px;
+}
+
+/* Footer */
+
+#footer, #footer a {
+  color: #000;
+  text-shadow: #c9c9c9 1px 1px 1px;
+}
+
+/* Dialog Boxes */
+
+.warning, .success {
+  color: #fff;
+  position: fixed;
+  top: 20%;
+  right: 0;
+  padding: 0.9375em;
+  padding-left: 2.25em;
+  z-index: 9999;
+  border: 0;
+  border-radius: 8px 0 0 8px;
+
+  animation: right-to-left 1.2s;
+  -moz-animation: right-to-left 1.2s;
+  -webkit-animation: right-to-left 1.2s;
+  -o-animation: right-to-left 1.2s;
+}
+
+.success {
+  background: #27B66C;
+}
+
+.warning {
+  background: #EB4747;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #BD1212;
+  padding: 5px 8px;
+}
+
+/* General and Fixes */
+
+.button {
+  background: #2795b6;
+}
+
+.dashboard-heading {
+  background: #2795b6;
+  font-size: 18px;
+  padding: 0.45em;
+}
+
+.range {
+  margin-top: 5px;
+  margin-right: 4px;
+}
+
+.cke * {
+  box-sizing: content-box;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea, select {
+  max-width: 100%;
+}
+
+/* Animations */
+
+/* Right to Left Fixed Position */
+
+@keyframes right-to-left
+{
+0%   {right:  -100%}
+25%   {right:   -25%}
+100% {right:    -0%}
+}
+
+@-moz-keyframes right-to-left /* Firefox */
+{
+0%   {right:  -100%}
+25%   {right:   -25%}
+100% {right:    -0%}
+}
+
+@-webkit-keyframes right-to-left /* Safari and Chrome */
+{
+0%   {right:  -100%}
+25%   {right:   -25%}
+100% {right:    -0%}
+}
+
+@-o-keyframes right-to-left /* Opera */
+{
+0%   {right:  -100%}
+25%   {right:   -25%}
+100% {right:    -0%}
+}
