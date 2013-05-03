@@ -255,9 +255,6 @@ body > #container {
 	border-bottom: 1px dotted #000000;	
 }
 .box > .content {
-	/*border-left: 1px solid #CCCCCC;
-	border-right: 1px solid #CCCCCC;
-	border-bottom: 1px solid #CCCCCC;*/
 	min-height: 300px;
 }
 a.button, .list a.button {
@@ -265,10 +262,6 @@ a.button, .list a.button {
 	color: #FFF;
 	display: inline-block;
 	padding: 5px 15px 5px 15px;
-	-webkit-border-radius: 10px 10px 10px 10px;
-	-moz-border-radius: 10px 10px 10px 10px;
-	-khtml-border-radius: 10px 10px 10px 10px;
-	border-radius: 10px 10px 10px 10px;
 }
 .list {
 	border-collapse: collapse;
@@ -296,7 +289,6 @@ a.button, .list a.button {
 .list tbody td {
 	vertical-align: middle;
 	padding: 0px 5px;
-	background: #FFFFFF;
 }
 .list tbody tr:hover td {
 	background-color: #FFFFCB;
@@ -385,22 +377,6 @@ table.form > tbody > tr > td {
 	line-height: 16px;
 	border-bottom: 1px solid #DDDDDD;
 	margin-bottom: 15px;
-}
-.htabs a {
-	border-top: 1px solid #DDDDDD;
-	border-left: 1px solid #DDDDDD;
-	border-right: 1px solid #DDDDDD;
-	background: #FFFFFF url('../image/tab.png') repeat-x;
-	padding: 7px 15px 6px 15px;
-	float: left;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	font-weight: bold;
-	text-align: center;
-	text-decoration: none;
-	color: #000000;
-	margin-right: 2px;
-	display: none;
 }
 .htabs a.selected {
 	padding-bottom: 7px;

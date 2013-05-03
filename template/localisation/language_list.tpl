@@ -53,7 +53,7 @@
               <td class="left"><?php echo $language['code']; ?></td>
               <td class="right"><?php echo $language['sort_order']; ?></td>
               <td class="right"><?php foreach ($language['action'] as $action) { ?>
-                [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                <a class="button edit" href="<?php echo $action['href']; ?>"><i class="icon-edit"></i> <?php echo $action['text']; ?></a>
                 <?php } ?></td>
             </tr>
             <?php } ?>

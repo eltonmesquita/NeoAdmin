@@ -47,7 +47,7 @@
               <td class="left"><?php echo $manufacturer['name']; ?></td>
               <td class="right"><?php echo $manufacturer['sort_order']; ?></td>
               <td class="right"><?php foreach ($manufacturer['action'] as $action) { ?>
-                [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                <a class="button edit" href="<?php echo $action['href']; ?>"><i class="icon-edit"></i> <?php echo $action['text']; ?></a>
                 <?php } ?></td>
             </tr>
             <?php } ?>

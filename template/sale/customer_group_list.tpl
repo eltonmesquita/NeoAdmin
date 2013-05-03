@@ -47,7 +47,7 @@
               <td class="left"><?php echo $customer_group['name']; ?></td>
               <td class="right"><?php echo $customer_group['sort_order']; ?></td>
               <td class="right"><?php foreach ($customer_group['action'] as $action) { ?>
-                [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                <a class="button edit" href="<?php echo $action['href']; ?>"><i class="icon-edit"></i> <?php echo $action['text']; ?></a>
                 <?php } ?></td>
             </tr>
             <?php } ?>

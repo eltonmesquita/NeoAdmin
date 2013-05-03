@@ -78,7 +78,7 @@
               <td class="left"><?php echo $voucher['date_added']; ?></td>
               <td class="right">[ <a onclick="sendVoucher('<?php echo $voucher['voucher_id']; ?>');"><?php echo $text_send; ?></a> ]
                 <?php foreach ($voucher['action'] as $action) { ?>
-                [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                <a class="button edit" href="<?php echo $action['href']; ?>"><i class="icon-edit"></i> <?php echo $action['text']; ?></a>
                 <?php } ?></td>
             </tr>
             <?php } ?>

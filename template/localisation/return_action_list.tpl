@@ -41,7 +41,7 @@
                 <?php } ?></td>
               <td class="left"><?php echo $return_action['name']; ?></td>
               <td class="right"><?php foreach ($return_action['action'] as $action) { ?>
-                [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                <a class="button edit" href="<?php echo $action['href']; ?>"><i class="icon-edit"></i> <?php echo $action['text']; ?></a>
                 <?php } ?></td>
             </tr>
             <?php } ?>

@@ -47,7 +47,7 @@
               <td class="left"><?php echo $geo_zone['name']; ?></td>
               <td class="left"><?php echo $geo_zone['description']; ?></td>
               <td class="right"><?php foreach ($geo_zone['action'] as $action) { ?>
-                [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                <a class="button edit" href="<?php echo $action['href']; ?>"><i class="icon-edit"></i> <?php echo $action['text']; ?></a>
                 <?php } ?></td>
             </tr>
             <?php } ?>

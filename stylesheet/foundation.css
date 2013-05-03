@@ -1700,7 +1700,6 @@ textarea {
   color: rgba(0, 0, 0, 0.75);
   display: block;
   font-size: 0.875em;
-  margin: 0 0 1em 0;
   padding: 0.5em;
   height: 2.3125em;
   -moz-box-sizing: border-box;
@@ -1759,17 +1758,6 @@ textarea {
   input[type="url"][disabled],
   textarea[disabled] {
     background-color: #dddddd; }
-
-/* Adjust margin for form elements below */
-input[type="file"],
-input[type="checkbox"],
-input[type="radio"],
-select {
-  margin: 0 0 1em 0; }
-
-/* Normalize file input width */
-input[type="file"] {
-  width: 100%; }
 
 /* We add basic fieldset styling */
 fieldset {

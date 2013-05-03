@@ -61,7 +61,7 @@ $(document).ready(function(){
 <body>
 <div class="row<?php if (!$logged) echo " logged-off"; ?>" id="container">
   <?php if ($logged) { ?>
-  <div class="large-1 columns" id="header">
+  <div class="large-1 columns" id="menu-left">
     <nav>
       <ul class="left">
         <li id="dashboard"><a href="<?php echo $home; ?>" class="top first-menu"><i class="icon-screen"></i></br><?php echo $text_dashboard; ?></a></li>
@@ -79,15 +79,15 @@ $(document).ready(function(){
             <li><a href="<?php echo $option; ?>"><?php echo $text_option; ?></a></li>
             <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
             <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
-            <li><a href="<?php echo $review; ?>"><?php echo $text_review; ?></a></li>
+            <li><a href="<?php echo $review; ?>"><i class="icon-bubbles"></i> <?php echo $text_review; ?></a></li>
             <li><a href="<?php echo $information; ?>"><?php echo $text_information; ?></a></li>
           </ul>
         </li>
         <li class="has-flyout" id="extension"><a class="top"><i class="icon-cogs"></i></br><?php echo $text_extension; ?></a>
           <ul class="flyout">
-            <li><a href="<?php echo $module; ?>"><?php echo $text_module; ?></a></li>
-            <li><a href="<?php echo $shipping; ?>"><?php echo $text_shipping; ?></a></li>
-            <li><a href="<?php echo $payment; ?>"><?php echo $text_payment; ?></a></li>
+            <li><a href="<?php echo $module; ?>"><i class="icon-cogs"></i> <?php echo $text_module; ?></a></li>
+            <li><a href="<?php echo $shipping; ?>"><i class="icon-truck"></i> <?php echo $text_shipping; ?></a></li>
+            <li><a href="<?php echo $payment; ?>"><i class="icon-coin"></i> <?php echo $text_payment; ?></a></li>
             <li><a href="<?php echo $total; ?>"><?php echo $text_total; ?></a></li>
             <li><a href="<?php echo $feed; ?>"><?php echo $text_feed; ?></a></li>
           </ul>
@@ -96,14 +96,14 @@ $(document).ready(function(){
           <ul class="flyout">
             <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
             <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
-            <li class="has-flyout"><a class="parent"><?php echo $text_customer; ?></a>
+            <li class="has-flyout"><a class="parent"><i class="icon-group"></i> <?php echo $text_customer; ?></a>
               <ul class="flyout">
-                <li><a href="<?php echo $customer; ?>"><?php echo $text_customer; ?></a></li>
-                <li><a href="<?php echo $customer_group; ?>"><?php echo $text_customer_group; ?></a></li>
-                <li><a href="<?php echo $customer_ban_ip; ?>"><?php echo $text_customer_ban_ip; ?></a></li>
+                <li><a href="<?php echo $customer; ?>"><i class="icon-user"></i> <?php echo $text_customer; ?></a></li>
+                <li><a href="<?php echo $customer_group; ?>"><i class="icon-group"></i> <?php echo $text_customer_group; ?></a></li>
+                <li><a href="<?php echo $customer_ban_ip; ?>"><i class="icon-cross"></i> <?php echo $text_customer_ban_ip; ?></a></li>
               </ul>
             </li>
-            <li><a href="<?php echo $affiliate; ?>"><?php echo $text_affiliate; ?></a></li>
+            <li><a href="<?php echo $affiliate; ?>"><i class="icon-address-book"></i> <?php echo $text_affiliate; ?></a></li>
             <li><a href="<?php echo $coupon; ?>"><?php echo $text_coupon; ?></a></li>
             <li class="has-flyout"><a class="parent"><?php echo $text_voucher; ?></a>
               <ul class="flyout">
@@ -111,22 +111,22 @@ $(document).ready(function(){
                 <li><a href="<?php echo $voucher_theme; ?>"><?php echo $text_voucher_theme; ?></a></li>
               </ul>
             </li>
-            <li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
+            <li><a href="<?php echo $contact; ?>"><i class="icon-envelope-alt"></i> <?php echo $text_contact; ?></a></li>
           </ul>
         </li>
         <li class="has-flyout" id="system"><a class="top"><i class="icon-cog"></i></br><?php echo $text_system; ?></a>
           <ul class="flyout">
-            <li><a href="<?php echo $setting; ?>"><?php echo $text_setting; ?></a></li>
+            <li><a href="<?php echo $setting; ?>"><i class="icon-cog"></i> <?php echo $text_setting; ?></a></li>
             <li class="has-flyout"><a class="parent"><?php echo $text_design; ?></a>
               <ul class="flyout">
                 <li><a href="<?php echo $layout; ?>"><?php echo $text_layout; ?></a></li>
                 <li><a href="<?php echo $banner; ?>"><?php echo $text_banner; ?></a></li>
               </ul>
             </li>
-            <li class="has-flyout"><a class="parent"><?php echo $text_users; ?></a>
+            <li class="has-flyout"><a class="parent"><i class="icon-group"></i> <?php echo $text_users; ?></a>
               <ul class="flyout">
-                <li><a href="<?php echo $user; ?>"><?php echo $text_user; ?></a></li>
-                <li><a href="<?php echo $user_group; ?>"><?php echo $text_user_group; ?></a></li>
+                <li><a href="<?php echo $user; ?>"><i class="icon-user"></i> <?php echo $text_user; ?></a></li>
+                <li><a href="<?php echo $user_group; ?>"><i class="icon-group"></i> <?php echo $text_user_group; ?></a></li>
               </ul>
             </li>
             <li class="has-flyout"><a class="parent"><?php echo $text_localisation; ?></a>
@@ -155,13 +155,13 @@ $(document).ready(function(){
                 <li><a href="<?php echo $weight_class; ?>"><?php echo $text_weight_class; ?></a></li>
               </ul>
             </li>
-            <li><a href="<?php echo $error_log; ?>"><?php echo $text_error_log; ?></a></li>
+            <li><a href="<?php echo $error_log; ?>"><i class="icon-cross"></i> <?php echo $text_error_log; ?></a></li>
             <li><a href="<?php echo $backup; ?>"><?php echo $text_backup; ?></a></li>
           </ul>
         </li>
         <li class="has-flyout" id="reports"><a class="top"><i class="icon-stats"></i></br><?php echo $text_reports; ?></a>
           <ul class="flyout">
-            <li class="has-flyout"><a class="parent"><?php echo $text_sale; ?></a>
+            <li class="has-flyout"><a class="parent"><i class="icon-coin"></i> <?php echo $text_sale; ?></a>
               <ul class="flyout">
                 <li><a href="<?php echo $report_sale_order; ?>"><?php echo $text_report_sale_order; ?></a></li>
                 <li><a href="<?php echo $report_sale_tax; ?>"><?php echo $text_report_sale_tax; ?></a></li>
@@ -170,13 +170,13 @@ $(document).ready(function(){
                 <li><a href="<?php echo $report_sale_coupon; ?>"><?php echo $text_report_sale_coupon; ?></a></li>
               </ul>
             </li>
-            <li class="has-flyout"><a class="parent"><?php echo $text_product; ?></a>
+            <li class="has-flyout"><a class="parent"><i class="icon-pie"></i> <?php echo $text_product; ?></a>
               <ul class="flyout">
                 <li><a href="<?php echo $report_product_viewed; ?>"><?php echo $text_report_product_viewed; ?></a></li>
                 <li><a href="<?php echo $report_product_purchased; ?>"><?php echo $text_report_product_purchased; ?></a></li>
               </ul>
             </li>
-            <li class="has-flyout"><a class="parent"><?php echo $text_customer; ?></a>
+            <li class="has-flyout"><a class="parent"><i class="icon-user"></i> <?php echo $text_customer; ?></a>
               <ul class="flyout">
                 <li><a href="<?php echo $report_customer_online; ?>"><?php echo $text_report_customer_online; ?></a></li>
                 <li><a href="<?php echo $report_customer_order; ?>"><?php echo $text_report_customer_order; ?></a></li>
@@ -184,7 +184,7 @@ $(document).ready(function(){
                 <li><a href="<?php echo $report_customer_credit; ?>"><?php echo $text_report_customer_credit; ?></a></li>
               </ul>
             </li>
-            <li class="has-flyout"><a class="parent"><?php echo $text_affiliate; ?></a>
+            <li class="has-flyout"><a class="parent"><i class="icon-address-book"></i> <?php echo $text_affiliate; ?></a>
               <ul class="flyout">
                 <li><a href="<?php echo $report_affiliate_commission; ?>"><?php echo $text_report_affiliate_commission; ?></a></li>
               </ul>

@@ -71,7 +71,7 @@
               <td class="left"><?php echo $tax_rate['date_added']; ?></td>
               <td class="left"><?php echo $tax_rate['date_modified']; ?></td>
               <td class="right"><?php foreach ($tax_rate['action'] as $action) { ?>
-                [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                <a class="button edit" href="<?php echo $action['href']; ?>"><i class="icon-edit"></i> <?php echo $action['text']; ?></a>
                 <?php } ?></td>
             </tr>
             <?php } ?>

@@ -53,7 +53,7 @@
               <td class="left"><?php echo $attribute['attribute_group']; ?></td>
               <td class="right"><?php echo $attribute['sort_order']; ?></td>
               <td class="right"><?php foreach ($attribute['action'] as $action) { ?>
-                [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                <a class="button edit" href="<?php echo $action['href']; ?>"><i class="icon-edit"></i> <?php echo $action['text']; ?></a>
                 <?php } ?></td>
             </tr>
             <?php } ?>

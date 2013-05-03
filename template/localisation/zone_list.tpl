@@ -53,7 +53,7 @@
               <td class="left"><?php echo $zone['name']; ?></td>
               <td class="left"><?php echo $zone['code']; ?></td>
               <td class="right"><?php foreach ($zone['action'] as $action) { ?>
-                [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                <a class="button edit" href="<?php echo $action['href']; ?>"><i class="icon-edit"></i> <?php echo $action['text']; ?></a>
                 <?php } ?></td>
             </tr>
             <?php } ?>

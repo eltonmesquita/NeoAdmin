@@ -39,7 +39,7 @@
               <td class="left"><?php echo $category['name']; ?></td>
               <td class="right"><?php echo $category['sort_order']; ?></td>
               <td class="right"><?php foreach ($category['action'] as $action) { ?>
-                [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                <a class="button edit" href="<?php echo $action['href']; ?>"><i class="icon-edit"></i> <?php echo $action['text']; ?></a>
                 <?php } ?></td>
             </tr>
             <?php } ?>
