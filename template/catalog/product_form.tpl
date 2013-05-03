@@ -10,13 +10,44 @@
   <?php } ?>
   <div class="box">
     <div class="heading">
-      <h1><img src="view/image/product.png" alt="" /> <?php echo $heading_title; ?></h1>
+      <h1><i class="icon-cog"></i>  <?php echo $heading_title; ?></h1>
       <div class="buttons"><a onclick="$('#form').submit();" class="button save"><i class="icon-save"></i>&nbsp;<?php echo $button_save; ?></a><a href="<?php echo $cancel; ?>" class="button cancel"><i class="icon-cross"></i>&nbsp;<?php echo $button_cancel; ?></a></div>
     </div>
     <div class="content">
-      <div id="tabs" class="htabs"><a href="#tab-general"><?php echo $tab_general; ?></a><a href="#tab-data"><?php echo $tab_data; ?></a><a href="#tab-links"><?php echo $tab_links; ?></a><a href="#tab-attribute"><?php echo $tab_attribute; ?></a><a href="#tab-option"><?php echo $tab_option; ?></a><a href="#tab-discount"><?php echo $tab_discount; ?></a><a href="#tab-special"><?php echo $tab_special; ?></a><a href="#tab-image"><?php echo $tab_image; ?></a><a href="#tab-reward"><?php echo $tab_reward; ?></a><a href="#tab-design"><?php echo $tab_design; ?></a></div>
+      <div id="tabs" class="htabs"><a href="#tab-general"><i class="icon-file"></i> <?php echo $tab_general; ?></a><a href="#tab-image"><i class="icon-pictures"></i> <?php echo $tab_image; ?></a><a href="#tab-data"><i class="icon-save"></i> <?php echo $tab_data; ?></a><a href="#tab-links"><i class="icon-link"></i> <?php echo $tab_links; ?></a><a href="#tab-attribute"><?php echo $tab_attribute; ?></a><a href="#tab-option"><?php echo $tab_option; ?></a><a href="#tab-discount"><?php echo $tab_discount; ?></a><a href="#tab-special"><?php echo $tab_special; ?></a><a href="#tab-reward"><?php echo $tab_reward; ?></a><a href="#tab-design"><i class="icon-screen"></i> <?php echo $tab_design; ?></a></div>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
         <div id="tab-general">
+          
+          <div class="row" id="main-data">
+            <div class="large-6 columns">
+              <div class="data-form">
+                <div class="data-label"><?php echo $entry_price; ?></div>
+                <div><input type="text" name="price" value="<?php echo $price; ?>" /></div>
+              </div>
+              <div class="data-form">
+                <div class="data-label"><span class="required">*</span> <?php echo $entry_model; ?></div>
+                <div><input type="text" name="model" value="<?php echo $model; ?>" />
+                  <?php if ($error_model) { ?>
+                  <span class="error"><?php echo $error_model; ?></span>
+                  <?php } ?>
+                </div>
+              </div>
+              <div class="data-form">
+                <div class="data-label"><?php echo $entry_quantity; ?></div>
+                <div><input type="text" name="quantity" value="<?php echo $quantity; ?>" size="2" /></div>
+              </div>
+            </div>
+            <div class="large-6 columns">
+              <div>
+                <div class="data-label"><?php echo $entry_image; ?></div>
+                <div class="image"><a onclick="image_upload('image', 'thumb');"><img src="<?php echo $thumb; ?>" alt="" id="thumb" /></a><br />
+                  <input type="hidden" name="image" value="<?php echo $image; ?>" id="image" />
+                  <a onclick="image_upload('image', 'thumb');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb').attr('src', '<?php echo $no_image; ?>'); $('#image').attr('value', '');"><?php echo $text_clear; ?></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           <div id="languages" class="htabs">
             <?php foreach ($languages as $language) { ?>
             <a href="#language<?php echo $language['language_id']; ?>"><img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /> <?php echo $language['name']; ?></a>
@@ -52,14 +83,44 @@
           </div>
           <?php } ?>
         </div>
+
+        <div id="tab-image">
+          <table id="images" class="list">
+            <thead>
+              <tr>
+                <td class="left"><?php echo $entry_image; ?></td>
+                <td class="right"><?php echo $entry_sort_order; ?></td>
+                <td></td>
+              </tr>
+            </thead>
+            <?php $image_row = 0; ?>
+            <?php foreach ($product_images as $product_image) { ?>
+            <tbody id="image-row<?php echo $image_row; ?>">
+              <tr>
+                <td class="left"><div class="image"><a onclick="image_upload('image<?php echo $image_row; ?>', 'thumb<?php echo $image_row; ?>');"><img src="<?php echo $product_image['thumb']; ?>" alt="" id="thumb<?php echo $image_row; ?>" /></a>
+                    <input type="hidden" name="product_image[<?php echo $image_row; ?>][image]" value="<?php echo $product_image['image']; ?>" id="image<?php echo $image_row; ?>" />
+                    <br />
+                    <a onclick="image_upload('image<?php echo $image_row; ?>', 'thumb<?php echo $image_row; ?>');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb<?php echo $image_row; ?>').attr('src', '<?php echo $no_image; ?>'); $('#image<?php echo $image_row; ?>').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
+                <td class="right"><input type="text" name="product_image[<?php echo $image_row; ?>][sort_order]" value="<?php echo $product_image['sort_order']; ?>" size="2" /></td>
+                <td class="left"><a onclick="$('#image-row<?php echo $image_row; ?>').remove();" class="button"><?php echo $button_remove; ?></a></td>
+              </tr>
+            </tbody>
+            <?php $image_row++; ?>
+            <?php } ?>
+            <tfoot>
+              <tr>
+                <td colspan="2"></td>
+                <td class="left"><a onclick="addImage();" class="button"><?php echo $button_add_image; ?></a></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
         <div id="tab-data">
           <table class="form">
             <tr>
-              <td><span class="required">*</span> <?php echo $entry_model; ?></td>
-              <td><input type="text" name="model" value="<?php echo $model; ?>" />
-                <?php if ($error_model) { ?>
-                <span class="error"><?php echo $error_model; ?></span>
-                <?php } ?></td>
+              <td><?php echo $entry_keyword; ?></td>
+              <td><input type="text" name="keyword" value="<?php echo $keyword; ?>" /></td>
             </tr>
             <tr>
               <td><?php echo $entry_sku; ?></td>
@@ -90,10 +151,6 @@
               <td><input type="text" name="location" value="<?php echo $location; ?>" /></td>
             </tr>
             <tr>
-              <td><?php echo $entry_price; ?></td>
-              <td><input type="text" name="price" value="<?php echo $price; ?>" /></td>
-            </tr>
-            <tr>
               <td><?php echo $entry_tax_class; ?></td>
               <td><select name="tax_class_id">
                   <option value="0"><?php echo $text_none; ?></option>
@@ -106,10 +163,7 @@
                   <?php } ?>
                 </select></td>
             </tr>
-            <tr>
-              <td><?php echo $entry_quantity; ?></td>
-              <td><input type="text" name="quantity" value="<?php echo $quantity; ?>" size="2" /></td>
-            </tr>
+
             <tr>
               <td><?php echo $entry_minimum; ?></td>
               <td><input type="text" name="minimum" value="<?php echo $minimum; ?>" size="2" /></td>
@@ -151,16 +205,6 @@
                 <input type="radio" name="shipping" value="0" checked="checked" />
                 <?php echo $text_no; ?>
                 <?php } ?></td>
-            </tr>
-            <tr>
-              <td><?php echo $entry_keyword; ?></td>
-              <td><input type="text" name="keyword" value="<?php echo $keyword; ?>" /></td>
-            </tr>
-            <tr>
-              <td><?php echo $entry_image; ?></td>
-              <td><div class="image"><img src="<?php echo $thumb; ?>" alt="" id="thumb" /><br />
-                  <input type="hidden" name="image" value="<?php echo $image; ?>" id="image" />
-                  <a onclick="image_upload('image', 'thumb');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb').attr('src', '<?php echo $no_image; ?>'); $('#image').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
             </tr>
             <tr>
               <td><?php echo $entry_date_available; ?></td>
@@ -604,37 +648,7 @@
             </tfoot>
           </table>
         </div>
-        <div id="tab-image">
-          <table id="images" class="list">
-            <thead>
-              <tr>
-                <td class="left"><?php echo $entry_image; ?></td>
-                <td class="right"><?php echo $entry_sort_order; ?></td>
-                <td></td>
-              </tr>
-            </thead>
-            <?php $image_row = 0; ?>
-            <?php foreach ($product_images as $product_image) { ?>
-            <tbody id="image-row<?php echo $image_row; ?>">
-              <tr>
-                <td class="left"><div class="image"><img src="<?php echo $product_image['thumb']; ?>" alt="" id="thumb<?php echo $image_row; ?>" />
-                    <input type="hidden" name="product_image[<?php echo $image_row; ?>][image]" value="<?php echo $product_image['image']; ?>" id="image<?php echo $image_row; ?>" />
-                    <br />
-                    <a onclick="image_upload('image<?php echo $image_row; ?>', 'thumb<?php echo $image_row; ?>');"><?php echo $text_browse; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('#thumb<?php echo $image_row; ?>').attr('src', '<?php echo $no_image; ?>'); $('#image<?php echo $image_row; ?>').attr('value', '');"><?php echo $text_clear; ?></a></div></td>
-                <td class="right"><input type="text" name="product_image[<?php echo $image_row; ?>][sort_order]" value="<?php echo $product_image['sort_order']; ?>" size="2" /></td>
-                <td class="left"><a onclick="$('#image-row<?php echo $image_row; ?>').remove();" class="button"><?php echo $button_remove; ?></a></td>
-              </tr>
-            </tbody>
-            <?php $image_row++; ?>
-            <?php } ?>
-            <tfoot>
-              <tr>
-                <td colspan="2"></td>
-                <td class="left"><a onclick="addImage();" class="button"><?php echo $button_add_image; ?></a></td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
+
         <div id="tab-reward">
           <table class="form">
             <tr>
