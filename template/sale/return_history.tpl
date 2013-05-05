@@ -4,7 +4,7 @@
 <?php if ($success) { ?>
 <div class="success"><?php echo $success; ?></div>
 <?php } ?>
-<table class="list">
+<table class="responsive list">
   <thead>
     <tr>
       <td class="left"><b><?php echo $column_date_added; ?></b></td>

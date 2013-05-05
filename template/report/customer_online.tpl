@@ -10,7 +10,7 @@
       <h1><img src="view/image/report.png" alt="" /> <?php echo $heading_title; ?></h1>
     </div>
     <div class="content">
-      <table class="list">
+      <table class="responsive list">
         <thead>
           <tr>
             <td class="left"><?php echo $column_ip; ?></td>
@@ -28,7 +28,7 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td align="right"><a onclick="filter();" class="button"><?php echo $button_filter; ?></a></td>
+            <td align="right"><a onclick="filter();" class="button filter"><i class="icon-filter"></i> <?php echo $button_filter; ?></a></td>
           </tr>
           <?php if ($customers) { ?>
           <?php foreach ($customers as $customer) { ?>

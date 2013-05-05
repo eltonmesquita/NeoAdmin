@@ -14,11 +14,11 @@
   <div class="box">
     <div class="heading">
       <h1><img src="view/image/customer.png" alt="" /> <?php echo $heading_title; ?></h1>
-      <div class="buttons"><a onclick="$('form').attr('action', '<?php echo $approve; ?>'); $('form').submit();" class="button"><?php echo $button_approve; ?></a><a href="<?php echo $insert; ?>" class="button"><?php echo $button_insert; ?></a><a onclick="$('form').attr('action', '<?php echo $delete; ?>'); $('form').submit();" class="button"><?php echo $button_delete; ?></a></div>
+      <div class="buttons"><a onclick="$('form').attr('action', '<?php echo $approve; ?>'); $('form').submit();" class="button"><?php echo $button_approve; ?></a><a href="<?php echo $insert; ?>" class="button insert"><i class="icon-plus"></i> <?php echo $button_insert; ?></a><a onclick="$('form').attr('action', '<?php echo $delete; ?>'); $('form').submit();" class="button"><?php echo $button_delete; ?></a></div>
     </div>
     <div class="content">
       <form action="" method="post" enctype="multipart/form-data" id="form">
-        <table class="list">
+        <table class="responsive list">
           <thead>
             <tr>
               <td width="1" style="text-align: center;"><input type="checkbox" onclick="$('input[name*=\'selected\']').attr('checked', this.checked);" /></td>
@@ -105,7 +105,7 @@
               <td><input type="text" name="filter_ip" value="<?php echo $filter_ip; ?>" /></td>
               <td><input type="text" name="filter_date_added" value="<?php echo $filter_date_added; ?>" size="12" id="date" /></td>
               <td></td>
-              <td align="right"><a onclick="filter();" class="button"><?php echo $button_filter; ?></a></td>
+              <td align="right"><a onclick="filter();" class="button filter"><i class="icon-filter"></i> <?php echo $button_filter; ?></a></td>
             </tr>
             <?php if ($customers) { ?>
             <?php foreach ($customers as $customer) { ?>

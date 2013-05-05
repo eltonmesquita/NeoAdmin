@@ -1,7 +1,6 @@
 html {
 	margin: 0;
 	padding: 0;
-	height: 100%;
 }
 body {
 	margin: 0;
@@ -148,7 +147,6 @@ body > #container {
 	font-size: 12px;
 	color: #333;
 	position: relative;
-	margin-top: -128px;
 	clear: both;
 }
 #footer a {
@@ -224,7 +222,6 @@ body > #container {
 	/*margin-bottom: 15px;*/
 }
 .box > .heading {
-	height: 57px;
 	padding-left: 7px;
 	padding-right: 7px;
 }
@@ -373,13 +370,11 @@ table.form > tbody > tr > td {
 }
 .htabs {
 	padding: 0px 0px 0px 10px;
-	height: 30px;
 	line-height: 16px;
 	border-bottom: 1px solid #DDDDDD;
 	margin-bottom: 15px;
 }
 .htabs a.selected {
-	padding-bottom: 7px;
 	background: #FFFFFF;
 }
 .vtabs {

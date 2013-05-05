@@ -14,7 +14,7 @@
       <div class="buttons"><a href="<?php echo $reset; ?>" class="button"><?php echo $button_reset; ?></a></div>
     </div>
     <div class="content">
-      <table class="list">
+      <table class="responsive list">
         <thead>
           <tr>
             <td class="left"><?php echo $column_name; ?></td>

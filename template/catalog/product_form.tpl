@@ -10,11 +10,11 @@
   <?php } ?>
   <div class="box">
     <div class="heading">
-      <h1><i class="icon-cog"></i>  <?php echo $heading_title; ?></h1>
+      <h1><i class="icon-box"></i>  <?php echo $heading_title; ?></h1>
       <div class="buttons"><a onclick="$('#form').submit();" class="button save"><i class="icon-save"></i>&nbsp;<?php echo $button_save; ?></a><a href="<?php echo $cancel; ?>" class="button cancel"><i class="icon-cross"></i>&nbsp;<?php echo $button_cancel; ?></a></div>
     </div>
     <div class="content">
-      <div id="tabs" class="htabs"><a href="#tab-general"><i class="icon-file"></i> <?php echo $tab_general; ?></a><a href="#tab-image"><i class="icon-pictures"></i> <?php echo $tab_image; ?></a><a href="#tab-data"><i class="icon-save"></i> <?php echo $tab_data; ?></a><a href="#tab-links"><i class="icon-link"></i> <?php echo $tab_links; ?></a><a href="#tab-attribute"><?php echo $tab_attribute; ?></a><a href="#tab-option"><?php echo $tab_option; ?></a><a href="#tab-discount"><?php echo $tab_discount; ?></a><a href="#tab-special"><?php echo $tab_special; ?></a><a href="#tab-reward"><?php echo $tab_reward; ?></a><a href="#tab-design"><i class="icon-screen"></i> <?php echo $tab_design; ?></a></div>
+      <div id="tabs" class="htabs"><a href="#tab-general"><i class="icon-box"></i> <?php echo $tab_general; ?></a><a href="#tab-image"><i class="icon-pictures"></i> <?php echo $tab_image; ?></a><a href="#tab-data"><i class="icon-save"></i> <?php echo $tab_data; ?></a><a href="#tab-links"><i class="icon-link"></i> <?php echo $tab_links; ?></a><a href="#tab-attribute"><i class="icon-text"></i> <?php echo $tab_attribute; ?></a><a href="#tab-option"><i class="icon-list-2"></i> <?php echo $tab_option; ?></a><a href="#tab-discount"><i class="icon-credit"></i> <?php echo $tab_discount; ?></a><a href="#tab-special"><i class="icon-tag"></i> <?php echo $tab_special; ?></a><a href="#tab-reward"><i class="icon-trophy"></i> <?php echo $tab_reward; ?></a><a href="#tab-design"><i class="icon-screen"></i> <?php echo $tab_design; ?></a></div>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
         <div id="tab-general">
           
@@ -656,7 +656,7 @@
               <td><input type="text" name="points" value="<?php echo $points; ?>" /></td>
             </tr>
           </table>
-          <table class="list">
+          <table class="responsive list">
             <thead>
               <tr>
                 <td class="left"><?php echo $entry_customer_group; ?></td>
@@ -674,7 +674,7 @@
           </table>
         </div>
         <div id="tab-design">
-          <table class="list">
+          <table class="responsive list">
             <thead>
               <tr>
                 <td class="left"><?php echo $entry_store; ?></td>

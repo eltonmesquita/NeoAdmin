@@ -7,6 +7,7 @@
 <script type="text/javascript" src="view/javascript/foundation.js"></script>
 <script type="text/javascript" src="view/javascript/foundation.forms.js"></script>
 <script type="text/javascript" src="view/javascript/neoadmin.js"></script>
+<script type="text/javascript" src="view/javascript/responsive-tables.js"></script>
 <script>
   $(function(){
     $(document).foundation();    

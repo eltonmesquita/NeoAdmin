@@ -1,4 +1,4 @@
-<table class="list">
+<table class="responsive list">
   <thead>
     <tr>
       <td class="right"><b><?php echo $column_order_id; ?></b></td>

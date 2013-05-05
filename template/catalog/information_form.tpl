@@ -103,7 +103,7 @@
           </table>
         </div>
         <div id="tab-design">
-          <table class="list">
+          <table class="responsive list">
             <thead>
               <tr>
                 <td class="left"><?php echo $entry_store; ?></td>

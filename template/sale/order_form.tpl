@@ -252,7 +252,7 @@
           </table>
         </div>
         <div id="tab-product" class="vtabs-content">
-          <table class="list">
+          <table class="responsive list">
             <thead>
               <tr>
                 <td></td>
@@ -313,7 +313,7 @@
               <?php } ?>
             </tbody>
           </table>
-          <table class="list">
+          <table class="responsive list">
             <thead>
               <tr>
                 <td colspan="2" class="left"><?php echo $text_product; ?></td>
@@ -340,7 +340,7 @@
           </table>
         </div>
         <div id="tab-voucher" class="vtabs-content">
-          <table class="list">
+          <table class="responsive list">
             <thead>
               <tr>
                 <td></td>
@@ -383,7 +383,7 @@
               <?php } ?>
             </tbody>
           </table>
-          <table class="list">
+          <table class="responsive list">
             <thead>
               <tr>
                 <td colspan="2" class="left"><?php echo $text_voucher; ?></td>
@@ -432,7 +432,7 @@
           </table>
         </div>
         <div id="tab-total" class="vtabs-content">
-          <table class="list">
+          <table class="responsive list">
             <thead>
               <tr>
                 <td class="left"><?php echo $column_product; ?></td>
@@ -486,7 +486,7 @@
               <?php } ?>
             </tbody>
           </table>
-          <table class="list">
+          <table class="responsive list">
             <thead>
               <tr>
                 <td class="left" colspan="2"><?php echo $text_order; ?></td>

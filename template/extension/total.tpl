@@ -16,7 +16,7 @@
       <h1><img src="view/image/total.png" alt="" /> <?php echo $heading_title; ?></h1>
     </div>
     <div class="content">
-      <table class="list">
+      <table class="responsive list">
         <thead>
           <tr>
             <td class="left"><?php echo $column_name; ?></td>

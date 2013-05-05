@@ -255,7 +255,7 @@
         </div>
         <?php } ?>
         <div id="tab-ip">
-          <table class="list">
+          <table class="responsive list">
             <thead>
               <tr>
                 <td class="left"><?php echo $column_ip; ?></td>

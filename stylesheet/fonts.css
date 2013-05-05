@@ -27,7 +27,8 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-file, .icon-address-book, .icon-credit, .icon-coin, .icon-calendar, .icon-bubbles, .icon-cog, .icon-pie, .icon-stats, .icon-user, .icon-key, .icon-phone, .icon-pencil, .icon-truck, .icon-thumbs-up, .icon-thumbs-up-2, .icon-heart, .icon-screen, .icon-cogs, .icon-file-2, .icon-edit, .icon-question-sign, .icon-link, .icon-group, .icon-save, .icon-paper-clip, .icon-envelope-alt, .icon-cross, .icon-pictures, .icon-print, .icon-house, .icon-lock {
+.icon-file, .icon-address-book, .icon-credit, .icon-coin, .icon-calendar, .icon-bubbles, .icon-cog, .icon-pie, .icon-stats, .icon-user, .icon-key, .icon-phone, .icon-pencil, .icon-truck, .icon-thumbs-up, .icon-thumbs-up-2, .icon-heart, .icon-cogs, .icon-file-2, .icon-edit, .icon-question-sign, .icon-link, .icon-group, .icon-save, .icon-paper-clip, .icon-envelope-alt, .icon-cross, .icon-pictures, .icon-print, .icon-house, .icon-lock, .icon-tags, .icon-gift, .icon-warning-sign, .icon-copy, .icon-box, .icon-ticket, .icon-plus, .icon-minus, .icon-trash, .icon-gift, .icon-earth, .icon-filter, .icon-screen,  .icon-off, .icon-info, .icon-download, .icon-cart, .icon-text, .icon-list, .icon-list-2, .icon-flow-cascade, .icon-file-2, .icon-rss, .icon-switch, .icon-trophy, .icon-wrench, .icon-database, .icon-paste, .icon-tag {
+
 	font-family: 'NeoAdmin';
 	speak: none;
 	font-style: normal;
@@ -70,9 +71,6 @@ you can use the generic selector below, but it's slower:
 .icon-key:before {
 	content: "\e00a";
 }
-.icon-lock:before {
-	content: "\e00b";
-}
 .icon-phone:before {
 	content: "\e00c";
 }
@@ -90,9 +88,6 @@ you can use the generic selector below, but it's slower:
 }
 .icon-heart:before {
 	content: "\e011";
-}
-.icon-screen:before {
-	content: "\e012";
 }
 .icon-cogs:before {
 	content: "\e013";
@@ -135,4 +130,91 @@ you can use the generic selector below, but it's slower:
 }
 .icon-lock:before {
 	content: "\e018";
+}
+.icon-tags:before {
+	content: "\f02c";
+}
+.icon-gift:before {
+	content: "\f06b";
+}
+.icon-warning-sign:before {
+	content: "\f071";
+}
+.icon-copy:before {
+	content: "\f0c5";
+}
+.icon-box:before {
+	content: "\e00b";
+}
+.icon-ticket:before {
+	content: "\e019";
+}
+.icon-plus:before {
+	content: "\e01a";
+}
+.icon-minus:before {
+	content: "\e01b";
+}
+.icon-trash:before {
+	content: "\e01c";
+}
+.icon-gift:before {
+	content: "\e01d";
+}
+.icon-earth:before {
+	content: "\e01e";
+}
+.icon-filter:before {
+	content: "\e01f";
+}
+.icon-screen:before {
+	content: "\f108";
+}
+.icon-off:before {
+	content: "\f011";
+}
+.icon-info:before {
+	content: "\e012";
+}
+.icon-download:before {
+	content: "\e020";
+}
+.icon-cart:before {
+	content: "\e021";
+}
+.icon-text:before {
+	content: "\e022";
+}
+.icon-list:before {
+	content: "\e023";
+}
+.icon-list-2:before {
+	content: "\e024";
+}
+.icon-flow-cascade:before {
+	content: "\e025";
+}
+.icon-file-2:before {
+	content: "\e014";
+}
+.icon-rss:before {
+	content: "\e026";
+}
+.icon-switch:before {
+	content: "\e027";
+}
+.icon-trophy:before {
+	content: "\e028";
+}
+.icon-wrench:before {
+	content: "\f0ad";
+}
+.icon-database:before {
+	content: "\e029";
+}
+.icon-paste:before {
+	content: "\f0ea";
+}
+.icon-tag:before {
+	content: "\e02a";
 }

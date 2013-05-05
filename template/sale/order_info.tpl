@@ -285,7 +285,7 @@
       </div>
       <?php } ?>
       <div id="tab-product" class="vtabs-content">
-        <table class="list">
+        <table class="responsive list">
           <thead>
             <tr>
               <td class="left"><?php echo $column_product; ?></td>
@@ -334,7 +334,7 @@
         </table>
         <?php if ($downloads) { ?>
         <h3><?php echo $text_download; ?></h3>
-        <table class="list">
+        <table class="responsive list">
           <thead>
             <tr>
               <td class="left"><b><?php echo $column_download; ?></b></td>

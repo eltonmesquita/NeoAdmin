@@ -84,7 +84,7 @@
       <div class="latest">
         <div class="dashboard-heading"><?php echo $text_latest_10_orders; ?></div>
         <div class="dashboard-content">
-          <table class="list">
+          <table class="responsive list">
             <thead>
               <tr>
                 <td class="right"><?php echo $column_order; ?></td>

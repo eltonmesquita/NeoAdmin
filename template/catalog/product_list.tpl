@@ -13,12 +13,12 @@
   <?php } ?>
   <div class="box">
     <div class="heading">
-      <h1><img src="view/image/product.png" alt="" /> <?php echo $heading_title; ?></h1>
-      <div class="buttons"><a href="<?php echo $insert; ?>" class="button"><?php echo $button_insert; ?></a><a onclick="$('#form').attr('action', '<?php echo $copy; ?>'); $('#form').submit();" class="button"><?php echo $button_copy; ?></a><a onclick="$('form').submit();" class="button"><?php echo $button_delete; ?></a></div>
+      <h1><i class="icon-box"></i> <?php echo $heading_title; ?></h1>
+      <div class="buttons"><a href="<?php echo $insert; ?>" class="button insert"><i class="icon-plus"></i> <?php echo $button_insert; ?></a><a onclick="$('#form').attr('action', '<?php echo $copy; ?>'); $('#form').submit();" class="button"><i class="icon-copy"></i> <?php echo $button_copy; ?></a><a onclick="$('form').submit();" class="button delete"><i class="icon-trash"></i> <?php echo $button_delete; ?></a></div>
     </div>
     <div class="content">
       <form action="<?php echo $delete; ?>" method="post" enctype="multipart/form-data" id="form">
-        <table class="list">
+        <table class="responsive list">
           <thead>
             <tr>
               <td width="1" style="text-align: center;"><input type="checkbox" onclick="$('input[name*=\'selected\']').attr('checked', this.checked);" /></td>
@@ -72,7 +72,7 @@
                   <option value="0"><?php echo $text_disabled; ?></option>
                   <?php } ?>
                 </select></td>
-              <td align="right"><a onclick="filter();" class="button"><?php echo $button_filter; ?></a></td>
+              <td align="right"><a onclick="filter();" class="button filter"><i class="icon-filter"></i> <?php echo $button_filter; ?></a></td>
             </tr>
             <?php if ($products) { ?>
             <?php foreach ($products as $product) { ?>

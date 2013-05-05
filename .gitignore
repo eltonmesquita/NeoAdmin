@@ -126,6 +126,8 @@ Thumbs.db
 # Folder config file
 Desktop.ini
 
+# Notepad ++ Backup Folder
+nppBackup
 
 #############
 ## Python
