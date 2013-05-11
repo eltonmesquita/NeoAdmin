@@ -28,94 +28,98 @@
       <h1><img src="view/image/home.png" alt="" /> <?php echo $heading_title; ?></h1>
     </div>
     <div class="content">
-      <div class="overview">
-        <div class="dashboard-heading"><?php echo $text_overview; ?></div>
-        <div class="dashboard-content">
-          <table>
-            <tr>
-              <td><?php echo $text_total_sale; ?></td>
-              <td><?php echo $total_sale; ?></td>
-            </tr>
-            <tr>
-              <td><?php echo $text_total_sale_year; ?></td>
-              <td><?php echo $total_sale_year; ?></td>
-            </tr>
-            <tr>
-              <td><?php echo $text_total_order; ?></td>
-              <td><?php echo $total_order; ?></td>
-            </tr>
-            <tr>
-              <td><?php echo $text_total_customer; ?></td>
-              <td><?php echo $total_customer; ?></td>
-            </tr>
-            <tr>
-              <td><?php echo $text_total_customer_approval; ?></td>
-              <td><?php echo $total_customer_approval; ?></td>
-            </tr>
-            <tr>
-              <td><?php echo $text_total_review_approval; ?></td>
-              <td><?php echo $total_review_approval; ?></td>
-            </tr>
-            <tr>
-              <td><?php echo $text_total_affiliate; ?></td>
-              <td><?php echo $total_affiliate; ?></td>
-            </tr>
-            <tr>
-              <td><?php echo $text_total_affiliate_approval; ?></td>
-              <td><?php echo $total_affiliate_approval; ?></td>
-            </tr>
-          </table>
+      <div class="row">
+        <div class="large-6 overview columns">
+          <div class="dashboard-heading"><?php echo $text_overview; ?></div>
+          <div class="dashboard-content">
+            <table>
+              <tr>
+                <td><?php echo $text_total_sale; ?></td>
+                <td><?php echo $total_sale; ?></td>
+              </tr>
+              <tr>
+                <td><?php echo $text_total_sale_year; ?></td>
+                <td><?php echo $total_sale_year; ?></td>
+              </tr>
+              <tr>
+                <td><?php echo $text_total_order; ?></td>
+                <td><?php echo $total_order; ?></td>
+              </tr>
+              <tr>
+                <td><?php echo $text_total_customer; ?></td>
+                <td><?php echo $total_customer; ?></td>
+              </tr>
+              <tr>
+                <td><?php echo $text_total_customer_approval; ?></td>
+                <td><?php echo $total_customer_approval; ?></td>
+              </tr>
+              <tr>
+                <td><?php echo $text_total_review_approval; ?></td>
+                <td><?php echo $total_review_approval; ?></td>
+              </tr>
+              <tr>
+                <td><?php echo $text_total_affiliate; ?></td>
+                <td><?php echo $total_affiliate; ?></td>
+              </tr>
+              <tr>
+                <td><?php echo $text_total_affiliate_approval; ?></td>
+                <td><?php echo $total_affiliate_approval; ?></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="large-6 statistic columns">
+          <div class="range"><?php echo $entry_range; ?>
+            <select id="range" onchange="getSalesChart(this.value)">
+              <option value="day"><?php echo $text_day; ?></option>
+              <option value="week"><?php echo $text_week; ?></option>
+              <option value="month"><?php echo $text_month; ?></option>
+              <option value="year"><?php echo $text_year; ?></option>
+            </select>
+          </div>
+          <div class="dashboard-heading"><?php echo $text_statistics; ?></div>
+          <div class="dashboard-content">
+            <div id="report" style="width: 390px; height: 170px; margin: auto;"></div>
+          </div>
         </div>
       </div>
-      <div class="statistic">
-        <div class="range"><?php echo $entry_range; ?>
-          <select id="range" onchange="getSalesChart(this.value)">
-            <option value="day"><?php echo $text_day; ?></option>
-            <option value="week"><?php echo $text_week; ?></option>
-            <option value="month"><?php echo $text_month; ?></option>
-            <option value="year"><?php echo $text_year; ?></option>
-          </select>
-        </div>
-        <div class="dashboard-heading"><?php echo $text_statistics; ?></div>
-        <div class="dashboard-content">
-          <div id="report" style="width: 390px; height: 170px; margin: auto;"></div>
-        </div>
-      </div>
-      <div class="latest">
-        <div class="dashboard-heading"><?php echo $text_latest_10_orders; ?></div>
-        <div class="dashboard-content">
-          <table class="responsive list">
-            <thead>
-              <tr>
-                <td class="right"><?php echo $column_order; ?></td>
-                <td class="left"><?php echo $column_customer; ?></td>
-                <td class="left"><?php echo $column_status; ?></td>
-                <td class="left"><?php echo $column_date_added; ?></td>
-                <td class="right"><?php echo $column_total; ?></td>
-                <td class="right"><?php echo $column_action; ?></td>
-              </tr>
-            </thead>
-            <tbody>
-              <?php if ($orders) { ?>
-              <?php foreach ($orders as $order) { ?>
-              <tr>
-                <td class="right"><?php echo $order['order_id']; ?></td>
-                <td class="left"><?php echo $order['customer']; ?></td>
-                <td class="left"><?php echo $order['status']; ?></td>
-                <td class="left"><?php echo $order['date_added']; ?></td>
-                <td class="right"><?php echo $order['total']; ?></td>
-                <td class="right"><?php foreach ($order['action'] as $action) { ?>
-                  <a class="button edit" href="<?php echo $action['href']; ?>"><i class="icon-edit"></i> <?php echo $action['text']; ?></a>
-                  <?php } ?></td>
-              </tr>
-              <?php } ?>
-              <?php } else { ?>
-              <tr>
-                <td class="center" colspan="6"><?php echo $text_no_results; ?></td>
-              </tr>
-              <?php } ?>
-            </tbody>
-          </table>
+      <div class="row">
+        <div class="large-12 latest columns">
+          <div class="dashboard-heading"><?php echo $text_latest_10_orders; ?></div>
+          <div class="dashboard-content">
+            <table class="responsive list">
+              <thead>
+                <tr>
+                  <td class="right"><?php echo $column_order; ?></td>
+                  <td class="left"><?php echo $column_customer; ?></td>
+                  <td class="left"><?php echo $column_status; ?></td>
+                  <td class="left"><?php echo $column_date_added; ?></td>
+                  <td class="right"><?php echo $column_total; ?></td>
+                  <td class="right"><?php echo $column_action; ?></td>
+                </tr>
+              </thead>
+              <tbody>
+                <?php if ($orders) { ?>
+                <?php foreach ($orders as $order) { ?>
+                <tr>
+                  <td class="right"><?php echo $order['order_id']; ?></td>
+                  <td class="left"><?php echo $order['customer']; ?></td>
+                  <td class="left"><?php echo $order['status']; ?></td>
+                  <td class="left"><?php echo $order['date_added']; ?></td>
+                  <td class="right"><?php echo $order['total']; ?></td>
+                  <td class="right"><?php foreach ($order['action'] as $action) { ?>
+                    <a class="button edit" href="<?php echo $action['href']; ?>"><i class="icon-edit"></i> <?php echo $action['text']; ?></a>
+                    <?php } ?></td>
+                </tr>
+                <?php } ?>
+                <?php } else { ?>
+                <tr>
+                  <td class="center" colspan="6"><?php echo $text_no_results; ?></td>
+                </tr>
+                <?php } ?>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

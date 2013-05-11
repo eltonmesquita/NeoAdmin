@@ -18,11 +18,11 @@
 
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="view/stylesheet/fonts.css" />
-<link rel="stylesheet" type="text/css" href="view/stylesheet/responsive-tables.css" />
 <link rel="stylesheet" type="text/css" href="view/stylesheet/normalize.css" />
 <link rel="stylesheet" type="text/css" href="view/stylesheet/foundation.css" />
 <link rel="stylesheet" type="text/css" href="view/stylesheet/stylesheet.css" />
 <link rel="stylesheet" type="text/css" href="view/stylesheet/neoadmin.css" />
+<link rel="stylesheet" type="text/css" href="view/stylesheet/responsive-tables.css" />
 <?php foreach ($styles as $style) { ?>
 <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
@@ -30,7 +30,6 @@
 <script type="text/javascript" src="view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
 <link type="text/css" href="view/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
 <script type="text/javascript" src="view/javascript/jquery/tabs.js"></script>
-<!--<script type="text/javascript" src="view/javascript/jquery/superfish/js/superfish.js"></script>-->
 <script type="text/javascript" src="view/javascript/common.js"></script>
 <?php foreach ($scripts as $script) { ?>
 <script type="text/javascript" src="<?php echo $script; ?>"></script>
@@ -64,8 +63,9 @@ $(document).ready(function(){
 <div class="row<?php if (!$logged) echo " logged-off"; ?>" id="container">
   <?php if ($logged) { ?>
   <div class="large-1 columns" id="menu-left">
+    <img class="logo" src="view/image/logo.png" title="<?php echo $heading_title; ?>" onclick="location = '<?php echo $home; ?>'" />
     <div class="menu-wrapper">
-      <div class="menu-icon"><a href="#"><i class="icon-list"></i></a></div>
+      <div class="menu-icon"><a><i class="icon-list"></i></a></div>
       <nav>
         <ul class="left">
           <li id="dashboard"><a href="<?php echo $home; ?>" class="top first-menu"><i class="icon-screen"></i><?php echo $text_dashboard; ?></a></li>
@@ -211,7 +211,7 @@ $(document).ready(function(){
       <div class="row">
         <div class="large-5 columns">
           <div class="div1">
-            <div class="div2"><img src="view/image/logo.png" title="<?php echo $heading_title; ?>" onclick="location = '<?php echo $home; ?>'" /></div>
+            <div class="div2"><img id="logo" src="view/image/logo.png" title="<?php echo $heading_title; ?>" onclick="location = '<?php echo $home; ?>'" /></div>
           </div>
         </div>
         <div class="large-7 columns">

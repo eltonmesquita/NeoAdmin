@@ -2,7 +2,7 @@
 <div id="content">
   <div class="box" style="width: 400px; min-height: 300px; margin-top: 40px; margin-left: auto; margin-right: auto;">
     <div class="heading">
-      <h1><i class="icon-key"></i> <?php echo $text_login; ?></h1>
+      <h1><?php echo $text_login; ?></h1>
     </div>
     <div class="content" style="min-height: 150px; overflow: hidden;">
       <?php if ($success) { ?>
@@ -17,10 +17,10 @@
             <img src="view/image/login.png" alt="<?php echo $text_login; ?>" />
           </div>
           <div class="large-7 columns">
-            <?php echo $entry_username; ?><br />
-            <input type="text" name="username" value="<?php echo $username; ?>" style="margin-top: 4px;" />
-            <?php echo $entry_password; ?>
-            <input type="password" name="password" value="<?php echo $password; ?>" style="margin-top: 4px;" />
+            <p><?php echo $entry_username; ?><br />
+            <input type="text" name="username" value="<?php echo $username; ?>" style="margin-top: 4px;" /></p>
+            <p><?php echo $entry_password; ?><br />
+            <input type="password" name="password" value="<?php echo $password; ?>" style="margin-top: 4px;" /></p>
             <?php if ($forgotten) { ?>
             <p><a href="<?php echo $forgotten; ?>"><?php echo $text_forgotten; ?></a></p>
             <?php } ?>

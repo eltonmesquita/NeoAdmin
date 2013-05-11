@@ -218,16 +218,8 @@ body > #container {
 .image img {
 	margin-bottom: 5px;
 }
-.box {
-	/*margin-bottom: 15px;*/
-}
-.box > .heading {
-	padding-left: 7px;
-	padding-right: 7px;
-}
 .box > .heading h1 {
 	margin: 0px;
-	padding: 11px 0px 0px 0px;
 	float: left;
 }
 .box > .heading h1 img {
@@ -452,8 +444,6 @@ table.form > tbody > tr > td {
 	background: #E4EEF7;
 }
 .overview {
-	float: left;
-	width: 49%;
 	margin-bottom: 20px;
 }
 .overview table {
@@ -463,8 +453,6 @@ table.form > tbody > tr > td {
 	text-align: right;
 }
 .statistic {
-	float: right;
-	width: 49%;
 	margin-bottom: 20px;
 }
 .range {

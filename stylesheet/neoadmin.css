@@ -8,21 +8,52 @@ a {
   text-decoration: none;
 }
 
-body {
+html {
   background: url(../image/bg.jpg);
-  background-size: cover;
+  background-size: contain;
+}
+
+body {
+  background: transparent;
 }
 
 /* Menu */
+
+.menu-wrapper {
+  width: 47px;
+}
 
 #menu-left {
   padding: 0;
   width: 100%;
   position: fixed;
   top: -0.9375em;
-  background: #2795b6;
+  background: #504b41;
   height: 60px;
   z-index: 999;
+}
+
+.menu-icon a {
+  color: #fff;
+  font-size: 3em;
+  display: block;
+  width: 47px;
+  margin-top: 15px;
+  z-index: 999;
+}
+
+.logo {
+  float: right;
+  width: 150px;
+  margin: 22px 5px 0 0;
+}
+
+#logo {
+  display: none;
+}
+
+.menu-wrapper:hover > nav {
+  display: block;
 }
 
 nav {
@@ -63,7 +94,7 @@ nav ul {
   background: #fff;
   list-style: none;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 4px;
   margin: auto;
 }
 
@@ -79,11 +110,11 @@ nav ul li:last-child {
 }
 
 a.first-menu {
-  border-radius: 8px 8px 0 0;
+  border-radius: 4px 4px 0 0;
 }
 
 a.last-menu {
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 4px 4px;
 }
 
 nav ul li ul {
@@ -118,14 +149,11 @@ ul.flyout {
   min-width: 200px;
   border: #504b41 1px solid;
   border-radius: 0;
+  margin: auto;
 }
 
 .flyout a [class*="icon-"] {
   color: #474747;
-}
-
-.flyout .flyout {
-  left: 100%;
 }
 
 nav a .icon-screen {
@@ -226,6 +254,10 @@ aside ul li a:hover {
   background: #E2492B;
 }
 
+aside .div3 {
+  display: none;
+}
+
 #store a {
   background: #638e43;
   color: #fff;
@@ -251,16 +283,17 @@ aside ul li a:hover {
 	background: #fff;
   position: relative;
 	padding-bottom: 2.571em;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .box > .heading {
   background: #504b41;
+  padding: 4px;
   overflow: hidden;
-  -webkit-border-radius: 8px 8px 0px 0px;
-  -moz-border-radius: 8px 8px 0px 0px;
-  -khtml-border-radius: 8px 8px 0px 0px;
-  border-radius: 8px 8px 0px 0px;
+  -webkit-border-radius: 4px 4px 0px 0px;
+  -moz-border-radius: 4px 4px 0px 0px;
+  -khtml-border-radius: 4px 4px 0px 0px;
+  border-radius: 4px 4px 0px 0px;
 }
 
 .box > .heading h1 {
@@ -407,7 +440,7 @@ thead .help {
   padding: 0.975em;
   background-color: #767066;
   border: 0;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 4px 4px;
 }
 
 .breadcrumb a {
@@ -418,8 +451,8 @@ thead .help {
 
 .logged-off .content {
   background: #fff;
-  border-radius: 0 0 8px 8px;
-  padding: 1.875em 1.875em 0.9375em 1.875em;
+  border-radius: 0 0 4px 4px;
+  padding: 0.9375em;
 }
 
 .logged-off .large-5 {
@@ -427,12 +460,21 @@ thead .help {
 }
 
 .logged-off .heading {
-  padding: 0 0.9375em;
+  padding: 0.3em 0.9375em;
 }
 
-.heading h1 .icon-key {
-  color: #DFA000;
-  padding-right: 5px;
+.logged-off h1 {
+  text-align: center;
+  font-size: 1.5em!important;
+  font-weight: normal;
+}
+
+.logged-off .button {
+  margin-bottom: 0;
+}
+
+.logged-off img {
+  margin-top: 3em;
 }
 
 /* Footer */
@@ -552,6 +594,10 @@ textarea, select {
 
 @media only screen and (min-width: 48em) {
 
+.menu-wrapper {
+  width: 100%;
+}
+
 #menu-left {
   padding: 0;
   width: 8.33333%;
@@ -561,11 +607,23 @@ textarea, select {
   height: auto;
 }
 
+#logo {
+  display: block;
+}
+
+.logo {
+  display: none;
+}
+
 nav {
   display: block;
   position: relative;
   top: 0;
   width: auto;
+}
+
+.menu-icon {
+  display: none;
 }
 
 nav [class*="icon-"] {
@@ -577,6 +635,14 @@ nav [class*="icon-"] {
 nav ul {
   max-width: 100px;
   margin-top: 0.9375em;
+}
+
+.flyout .flyout {
+  left: 100%;
+}
+
+aside .div3 {
+  display: block;
 }
 
 .box > .heading .buttons {
