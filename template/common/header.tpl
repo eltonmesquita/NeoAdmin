@@ -17,12 +17,9 @@
 <link rel="icon" type="image/png" href="view/image/opencart.ico">
 
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="view/stylesheet/fonts.css" />
-<link rel="stylesheet" type="text/css" href="view/stylesheet/normalize.css" />
 <link rel="stylesheet" type="text/css" href="view/stylesheet/foundation.css" />
-<link rel="stylesheet" type="text/css" href="view/stylesheet/stylesheet.css" />
 <link rel="stylesheet" type="text/css" href="view/stylesheet/neoadmin.css" />
-<link rel="stylesheet" type="text/css" href="view/stylesheet/responsive-tables.css" />
+
 <?php foreach ($styles as $style) { ?>
 <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
@@ -134,7 +131,7 @@ $(document).ready(function(){
                 </ul>
               </li>
               <li class="has-flyout"><a class="parent"><i class="icon-earth"></i><?php echo $text_localisation; ?></a>
-                <ul class="flyout">
+                <ul class="flyout up">
                   <li><a href="<?php echo $language; ?>"><?php echo $text_language; ?></a></li>
                   <li><a href="<?php echo $currency; ?>"><?php echo $text_currency; ?></a></li>
                   <li><a href="<?php echo $stock_status; ?>"><?php echo $text_stock_status; ?></a></li>

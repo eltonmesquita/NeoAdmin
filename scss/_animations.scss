@@ -1,0 +1,31 @@
+/* Animations */
+
+/* Right to Left Fixed Position */
+
+@keyframes right-to-left
+{
+0%   {right:  -100%}
+25%   {right:   -25%}
+100% {right:    -0%}
+}
+
+@-moz-keyframes right-to-left /* Firefox */
+{
+0%   {right:  -100%}
+25%   {right:   -25%}
+100% {right:    -0%}
+}
+
+@-webkit-keyframes right-to-left /* Safari and Chrome */
+{
+0%   {right:  -100%}
+25%   {right:   -25%}
+100% {right:    -0%}
+}
+
+@-o-keyframes right-to-left /* Opera */
+{
+0%   {right:  -100%}
+25%   {right:   -25%}
+100% {right:    -0%}
+}

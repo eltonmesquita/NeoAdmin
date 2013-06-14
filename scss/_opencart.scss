@@ -1,12 +1,5 @@
-html {
-	margin: 0;
-	padding: 0;
-}
-body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-}
+/* Opencart's default structure */
+
 body, td, th, input, select, textarea, option, optgroup {
 	font-size: 14px;
 	color: #000000;
@@ -35,103 +28,6 @@ form {
 label {
 	cursor: pointer;
 }
-#header .div1 {
-	height: 56px;
-	padding: 0px 30px;
-	background: url('../image/header.png') repeat-x;
-	min-width: 900px;
-}
-#header .div2 {
-	color: #FFFFFF;
-	padding: 18px 0px 0px 0px;
-	float: left;
-}
-#header .div3 {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	color: #FFF;
-	text-align: right;
-	padding: 15px 0px 0px 0px;
-	float: right;
-}
-#header .div2 span {
-	font-weight: bold;
-}
-#menu {
-	background: url('../image/menu.png') repeat-x;
-	position: relative;
-	z-index: 1;
-	height: 34px;
-	clear: both;
-	padding: 0px 30px;
-	min-width: 900px;
-}
-#menu > ul.left {
-	float: left;
-}
-#menu > ul.right {
-	float: right;
-}
-#menu > ul {
-	position: relative;
-	margin: 0;
-	padding: 0;
-}
-#menu > ul ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	background: url('../image/transparent.png');
-}
-#menu > ul a {
-	display: block;
-	text-decoration: none;
-}
-#menu > ul li {
-	float: left;
-	list-style: none;
-}
-#menu > ul > li + li {
-	background: url('../image/split.png') center left no-repeat;
-}
-#menu > ul .top {
-	padding: 10px 15px 9px 17px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	color: #FFFFFF;
-	text-align: center;
-}
-#menu > ul li ul {
-	position: absolute;
-}
-#menu > ul ul li {
-	padding: 2px;
-	clear: both;
-}
-#menu > ul .selected .top {
-	background: url('../image/selected.png') repeat-x;
-	color: #FFFFFF;
-}
-#menu > ul .parent {
-	background-image: url('../image/arrow-right.png'); 
-	background-position: 95% center;
-	background-repeat:no-repeat;
-}
-#menu > ul li ul ul {
-	margin: -29px 0 0 161px;
-}
-#menu > ul li li a {
-	padding: 5px;
-	margin: 1px;
-	color: #FFFFFF;	
-	width: 147px;
-}
-#menu > ul li li > a:hover {
-	margin: 0px;
-	border: 1px solid #BD4C14;
-	background-color: #391706; 
-}
-
 
 #container {
 	height: 100%;
@@ -218,10 +114,6 @@ body > #container {
 .image img {
 	margin-bottom: 5px;
 }
-.box > .heading h1 {
-	margin: 0px;
-	float: left;
-}
 .box > .heading h1 img {
 	float: left;
 	margin-left: 3px;
@@ -248,7 +140,7 @@ body > #container {
 }
 a.button, .list a.button {
 	text-decoration: none;
-	color: #FFF;
+	color: $lightest-color;
 	display: inline-block;
 	padding: 5px 15px 5px 15px;
 }
@@ -330,7 +222,7 @@ a.button, .list a.button {
 	font-weight: normal;
 	text-decoration: none;
 	color: #269BC6;
-	background: #FFFFFF;
+	background: $lightest-color;
 }
 .pagination .results {
 	float: right;
@@ -353,7 +245,7 @@ table.form > tbody > tr > td {
 	border: 1px solid #CCCCCC;
 	width: 350px;
 	height: 100px;
-	background: #FFFFFF;
+	background: $lightest-color;
 	overflow-y: scroll;
 }
 .scrollbox img {
@@ -367,7 +259,7 @@ table.form > tbody > tr > td {
 	margin-bottom: 15px;
 }
 .htabs a.selected {
-	background: #FFFFFF;
+	background: $lightest-color;
 }
 .vtabs {
 	width: 190px;
@@ -400,7 +292,7 @@ table.form > tbody > tr > td {
 }
 .vtabs a.selected {
 	padding-right: 15px;
-	background: #FFFFFF;
+	background: $lightest-color;
 }
 .vtabs a img, .vtabs span img {
 	position: relative;
@@ -438,7 +330,7 @@ table.form > tbody > tr > td {
 	margin-right: 3px;
 }
 .scrollbox div.even {
-	background: #FFFFFF;
+	background: $lightest-color;
 }
 .scrollbox div.odd {
 	background: #E4EEF7;
@@ -457,7 +349,7 @@ table.form > tbody > tr > td {
 }
 .range {
 	float: right;
-	color: #FFF;
+	color: $lightest-color;
 	vertical-align: middle;
 }
 .range {
@@ -468,14 +360,13 @@ table.form > tbody > tr > td {
 	clear: both;
 }
 .latest tbody td {
-	background: #FFF;
+	background: $lightest-color;
 }
 .dashboard-heading {
-	color: #FFF;
+	color: $lightest-color;
 }
 .dashboard-content {
-	background: #FCFCFC;
-	border: 1px solid #8EAEC3;
+	background: $bg-light;
 	padding: 10px;
 	min-height: 180px;
 }

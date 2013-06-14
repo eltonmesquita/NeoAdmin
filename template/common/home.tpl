@@ -1,3 +1,17 @@
+<?php
+  if ($total_customer_approval > 0) {
+  $costumer_approval_notification = 'active';
+  }
+  
+  if ($total_review_approval > 0) {
+  $review_approval_notification = 'active';
+  }
+  
+  if ($total_affiliate_approval > 0) {
+  $affiliate_approval_notification = 'active';
+  }
+?>
+
 <?php echo $header; ?>
 <div id="content">
   <div class="breadcrumb">
@@ -25,12 +39,53 @@
   <?php } ?>
   <div class="box">
     <div class="heading">
-      <h1><img src="view/image/home.png" alt="" /> <?php echo $heading_title; ?></h1>
+      <h1><i class="icon-screen"></i> <?php echo $heading_title; ?></h1>
     </div>
     <div class="content">
       <div class="row">
         <div class="large-6 overview columns">
-          <div class="dashboard-heading"><?php echo $text_overview; ?></div>
+            
+            <div class="dashboard-box hightlight">
+              <h4><?php echo $text_total_sale; ?></h4>
+              <span><?php echo $total_sale; ?></span>
+            </div>
+            
+            <ul class="large-block-grid-4">
+              <li>
+                <div class="dashboard-box client-approval">
+                  <i class="icon-user"></i>
+                  <h5><?php echo $text_total_customer_approval; ?></h5>
+                  <span class="notification <?php echo $costumer_approval_notification ?>"><?php echo $total_customer_approval; ?></span>
+                </div>
+              </li>
+
+              <li>
+                <div class="dashboard-box comment-approval">
+                  <i class="icon-bubbles"></i>
+                  <h5><?php echo $text_total_review_approval; ?></h5>
+                  <span class="notification <?php echo $review_approval_notification ?>"><?php echo $total_review_approval; ?></span>
+                </div>
+              </li>
+
+              <li>
+                <div class="dashboard-box affiliate-approval">
+                  <i class="icon-address-book"></i>
+                  <h5><?php echo $text_total_affiliate_approval; ?></h5>
+                  <span class="notification <?php echo $affiliate_approval_notification ?>"><?php echo $total_affiliate_approval; ?></span>
+                </div>
+              </li>
+              
+              <li>
+                <div class="dashboard-box sales-year">
+                  <i class="icon-coin"></i>
+                  <h5><?php echo $text_total_sale_year; ?></h5>
+                  <span><?php echo $total_sale_year; ?></span>
+                </div>
+              </li>
+              
+            </ul>
+
+          <!--<div class="dashboard-heading"><?php echo $text_overview; ?></div>
           <div class="dashboard-content">
             <table>
               <tr>
@@ -66,7 +121,7 @@
                 <td><?php echo $total_affiliate_approval; ?></td>
               </tr>
             </table>
-          </div>
+          </div>-->
         </div>
         <div class="large-6 statistic columns">
           <div class="range"><?php echo $entry_range; ?>

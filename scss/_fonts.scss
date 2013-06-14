@@ -27,9 +27,9 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-file, .icon-address-book, .icon-credit, .icon-coin, .icon-calendar, .icon-bubbles, .icon-cog, .icon-pie, .icon-stats, .icon-user, .icon-key, .icon-phone, .icon-pencil, .icon-truck, .icon-thumbs-up, .icon-thumbs-up-2, .icon-heart, .icon-cogs, .icon-file-2, .icon-edit, .icon-question-sign, .icon-link, .icon-group, .icon-save, .icon-paper-clip, .icon-envelope-alt, .icon-cross, .icon-pictures, .icon-print, .icon-house, .icon-lock, .icon-tags, .icon-gift, .icon-warning-sign, .icon-copy, .icon-box, .icon-ticket, .icon-plus, .icon-minus, .icon-trash, .icon-gift, .icon-earth, .icon-filter, .icon-screen,  .icon-off, .icon-info, .icon-download, .icon-cart, .icon-text, .icon-list, .icon-list-2, .icon-flow-cascade, .icon-file-2, .icon-rss, .icon-switch, .icon-trophy, .icon-wrench, .icon-database, .icon-paste, .icon-tag {
+.icon-file, .icon-address-book, .icon-credit, .icon-coin, .icon-calendar, .icon-bubbles, .icon-cog, .icon-pie, .icon-stats, .icon-user, .icon-key, .icon-phone, .icon-pencil, .icon-truck, .icon-thumbs-up, .icon-thumbs-up-2, .icon-heart, .icon-cogs, .icon-file-2, .icon-edit, .icon-question-sign, .icon-link, .icon-group, .icon-save, .icon-paper-clip, .icon-envelope-alt, .icon-cross, .icon-pictures, .icon-print, .icon-house, .icon-lock, .icon-tags, .icon-gift, .icon-warning-sign, .icon-copy, .icon-box, .icon-ticket, .icon-plus, .icon-minus, .icon-trash, .icon-gift, .icon-earth, .icon-filter, .icon-screen,  .icon-off, .icon-info, .icon-download, .icon-cart, .icon-text, .icon-list, .icon-list-2, .icon-flow-cascade, .icon-file-2, .icon-rss, .icon-switch, .icon-trophy, .icon-wrench, .icon-database, .icon-paste, .icon-tag, .icon-wand {
 
-	font-family: 'NeoAdmin';
+	font-family: $icon-font;
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -217,4 +217,7 @@ you can use the generic selector below, but it's slower:
 }
 .icon-tag:before {
 	content: "\e02a";
+}
+.icon-wand:before {
+	content: "\e02c";
 }

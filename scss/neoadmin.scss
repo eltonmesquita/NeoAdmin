@@ -1,0 +1,694 @@
+@import "variables";
+@import "fonts";
+@import "normalize";
+@import "responsive-tables";
+@import "opencart";
+
+/* General Style */
+
+* {
+  font-family: $main-font;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  background: url(../image/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+	padding: 0;
+}
+
+body {
+  background: transparent;
+  margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+/* Menu */
+
+.menu-wrapper {
+  width: 47px;
+}
+
+#menu-left {
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  top: -$gutter;
+  background: $bars-color;
+  height: 60px;
+  z-index: 999;
+}
+
+.menu-icon a {
+  color: $lightest-color;
+  font-size: 3em;
+  display: block;
+  width: 47px;
+  margin-top: 15px;
+  z-index: 999;
+}
+
+.logo {
+  float: right;
+  width: 150px;
+  margin: 22px 5px 0 0;
+}
+
+#logo {
+  display: none;
+}
+
+.menu-wrapper:hover > nav {
+  display: block;
+}
+
+nav {
+  display: none;
+  position: fixed;
+  top: 47px;
+  width: 100%;
+  max-width: 332px;
+}
+
+nav a, nav a:visited {
+  color: $dark-color;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: $gutter;
+  
+  @include main-transition
+}
+
+nav {
+  
+  ul {
+    background: $lightest-color;
+    list-style: none;
+    text-align: center;
+    @include radius-full;
+    margin: auto;
+      
+      li {
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        border-bottom: $light-border 1px solid;
+          &:last-child {
+            border-bottom: 0;
+          }
+          
+          ul {
+            display: none;
+            position: relative;
+            text-align: left;
+            z-index: 999;
+            
+            .has-flyout {
+              &:after {
+                content: " ";
+                position: absolute;
+                top: 35%;
+                right: 10px;
+                width: 0px;
+                height: 0px;
+                border-style: solid;
+                border-width: 5px 0 5px 8.7px;
+                border-color: transparent transparent transparent #acacac;
+              }
+              &:hover:after {
+                border-color: transparent transparent transparent $lightest-color;
+              }
+            }
+          }
+      }
+  }
+
+  [class*="icon-"] {
+    font-size: 1.8em;
+    display: inline;
+    margin-right: 10px;
+    }
+
+  .flyout [class*="icon-"] {
+    color: $bars-color;
+    font-size: 1.2em;
+    float: left;
+    margin-right: 8px;
+    }
+  .flyout.up {
+    top: -395px;
+  }
+}
+
+
+a.first-menu {
+  @include radius-top;
+}
+
+a.last-menu {
+  @include radius-bottom;
+}
+
+.has-flyout {
+  position: relative;
+}
+
+.has-flyout:hover > .flyout {
+  display: block;
+}
+
+ul.flyout {
+  max-width: 240px;
+  min-width: 206px;
+  border: $light-border 1px solid;
+  border-radius: 0;
+  margin: auto;
+  
+  .flyout a [class*="icon-"] {color: $dark-color;}
+}
+
+nav a .icon-screen {
+  color: $dashboard-color;
+}
+
+nav a .icon-file-2 {
+  color: $catalog-color;
+}
+
+nav a .icon-cogs{
+  color: $extensions-color;
+}
+
+nav a .icon-coin {
+  color: $sales-color;
+}
+
+nav .icon-stats {
+  color: $reports-color;
+}
+
+nav a .icon-question-sign {
+  color: $help-color;
+}
+
+nav a:hover, nav a:hover > [class*="icon-"]{
+  color: $lightest-color!important;
+}
+
+#dashboard a:hover {
+  background: $dashboard-color;
+}
+
+#catalog a:hover{
+  background: $catalog-color;
+}
+
+#extension a:hover {
+  background: $extensions-color;
+}
+
+#sale a:hover {
+  background: $sales-color;
+}
+
+#system a:hover {
+  background: $dark-color;
+}
+
+#reports a:hover{
+  background: $reports-color;
+}
+
+#help a:hover {
+  background: $help-color;
+}
+
+/* Header */
+
+header {
+  margin: $gutter 0;
+}
+
+aside {
+  float: right;
+  margin-top: 1em;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside li {
+  float: left;
+  margin-left: 3px;
+}
+
+aside li:first-child {
+  margin-left: 0;
+}
+
+aside ul li a {
+  color: $lightest-color;
+  background: $cancel-color;
+  padding: $gutter;
+  @include radius-full;
+
+  @include main-transition
+}
+
+aside ul li a:hover {
+  color: $lightest-color;
+  background: #E2492B;
+}
+
+aside .div3 {
+  display: none;
+}
+
+#store a {
+  background: $save-color;
+  color: $lightest-color;
+
+  @include main-transition
+}
+
+#store a:hover {
+  background: #81B958;
+}
+
+#container {
+  margin-top: 47px;
+}
+
+/* Content */
+
+#content {
+	background: $lightest-color;
+  position: relative;
+	padding-bottom: 2.571em;
+  @include radius-full;
+}
+
+.box > .heading {
+  background: $bars-color;
+  padding: 4px;
+  overflow: hidden;
+
+  @include radius-top
+}
+
+.box > .heading h1 {
+  color: $lightest-color;
+  font-size: 1.714em;
+  float: left;
+  margin: 0.1em 0.6em;
+}
+
+.box > .heading h1 img {
+  margin-top: 6px;
+}
+
+.box > .content {
+  padding: 1.875em;
+}
+
+.logged-off #content {
+  background: transparent;
+}
+
+.list, .list td {
+  border-color: $lightest-color;
+}
+
+.list thead td {
+  background-color: $bars-light-color;
+}
+
+.list thead td a, .list thead td {
+  color: $lightest-color;
+  font-weight: normal;
+}
+
+.dashboard-box {
+  background: $light-border;
+  padding: $gutter;
+  margin-bottom: $gutter;
+  position: relative;
+  text-align: center;
+  
+  @include radius-full;
+    [class*="icon-"] {
+      font-size: 3em;
+      color: $bars-color;
+    }
+  h5 {
+    font-size: 1em;
+  }
+}
+
+.dashboard-box.hightlight {
+  background: $bars-color;
+  color: $lightest-color;
+  max-width: 100%;
+  
+  @include radius-full;
+    h4 {
+      color: $lightest-color;
+    }
+    span {
+      font-size: $font-2x;
+      color: $sales-color;
+    }
+}
+
+span.notification {
+  background: $darker-color;
+  font-size: 0.8em;
+  color: $lightest-color;
+  width: 24px;
+  padding: 3px 6px;
+  border-radius: 1000px;
+  position: absolute;
+  top: 43px;
+  right: 23%;}
+
+span.notification.active {
+  background: $help-color;
+}
+
+/* Product Form */
+
+#main-data {
+  background: $bg-light;
+  padding: $gutter 0;
+  margin-bottom: $gutter;
+}
+
+thead .help {
+  color: $bg-light;
+}
+
+.data-form {
+  margin-bottom: 0.7em;
+}
+
+.data-label {
+  margin-bottom: 5px;
+}
+
+.heading h1 [class*="icon-"] {
+  font-weight: normal;
+}
+
+#main-data .image {
+  background: $lightest-color;
+}
+
+.htabs {
+  overflow: auto;
+}
+
+.htabs a {
+  width: 25%;
+  float: left;
+  border-right: 2px solid $lightest-color;
+  text-align: center;
+}
+
+.htabs a {
+  background: #F0F0F0;
+  padding: 7px 15px 6px 15px;
+  font-family: $main-font;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: $dark-color;
+  display: none;
+  border-radius: 4px 4px 0 0;
+
+  @include main-transition
+}
+
+.htabs a.selected, .htabs a:hover {
+  background: $bars-light-color;
+  color: $lightest-color;
+}
+
+.box > .heading .buttons {
+  width: 100%;
+}
+
+/* Breadcrumb */
+
+.breadcrumb {
+  color: $light-border;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  padding: 0.975em;
+  background-color: $bars-light-color;
+  border: 0;
+  border-radius: 0 0 4px 4px;
+}
+
+.breadcrumb a {
+  color: $lightest-color;
+}
+
+/* Login */
+
+.logged-off .content {
+  background: $lightest-color;
+  border-radius: 0 0 4px 4px;
+  padding: $gutter;
+}
+
+.logged-off .large-5 {
+  text-align: center;
+}
+
+.logged-off .heading {
+  padding: 0.3em $gutter;
+}
+
+.logged-off h1 {
+  text-align: center;
+  font-size: 1.5em!important;
+  font-weight: normal;
+}
+
+.logged-off .button {
+  margin-bottom: 0;
+}
+
+.logged-off img {
+  margin-top: 3em;
+}
+
+/* Footer */
+
+#footer, #footer a {
+  color: #000;
+  text-shadow: #c9c9c9 1px 1px 1px;
+}
+
+/* Dialog Boxes */
+
+.warning, .success {
+  color: $lightest-color;
+  max-width: 300px;
+  position: fixed;
+  top: 20%;
+  right: 0;
+  padding: $gutter 2.25em $gutter 1.875em;
+  z-index: 9999;
+  border: 0;
+  border-radius: 8px 0 0 8px;
+
+  animation: right-to-left 1.2s;
+  -moz-animation: right-to-left 1.2s;
+  -webkit-animation: right-to-left 1.2s;
+  -o-animation: right-to-left 1.2s;
+}
+
+.success {
+  background: $sales-color;
+}
+
+.warning {
+  background: $help-color;
+}
+
+.warning a, .warning a:hover, .success a, .success a:hover{
+  color: $lightest-color;
+}
+
+.close-btn {
+  background: #BD1212;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 8px;
+
+  @include main-transition
+}
+
+a.close-btn:hover {
+  background: #CE0000;
+}
+
+.hide-ui {
+  right: -100%!important;
+
+  @include reverse-transition;
+}
+
+/* General and Fixes */
+
+.button {
+  background: $catalog-color;
+  margin: 0 0 0.65em;
+}
+
+a.button, .list a.button {
+  @include radius-full;
+  font-weight: normal;
+}
+
+.button.save, .button.cancel, .button.large-size, .button.insert, .button.delete, .button.repair {
+  padding: $gutter;
+  border: 0;
+
+  @include main-transition
+}
+
+.button.edit {
+  display: inline!important;
+}
+
+.button.save, .button.edit {
+  background: $save-color;
+  border: 0;
+}
+
+.button.save:hover, .button.edit:hover {
+  background: $save-light-color;
+}
+
+.button.cancel {
+  background: $cancel-color;
+}
+
+.button.cancel:hover {
+  background: $cancel-light-color;
+}
+
+.button.insert {
+  background: $save-color;
+  border-color: $save-color;
+}
+
+.button.delete {
+  background: $cancel-color;
+  border-color: $cancel-color;
+}
+
+.dashboard-heading {
+  background: $catalog-color;
+  font-size: 18px;
+  padding: 0.45em;
+}
+
+#store {
+  position: relative;
+  &:hover > ul{
+    display: block;
+  }
+
+  ul {
+    background: $lightest-color;
+    border: 1px solid $light-border;
+    min-width: 9.375em;
+    display: none;
+    position: absolute;
+    top: 2em;
+    right: 0;
+    padding: $gutter;
+    z-index: 999;
+    @include radius-full;
+
+      li {
+        float: right;
+        width: 100%;
+        margin-bottom: 8px;
+        &:nth-child(2) a{
+          background: $dashboard-color
+        }
+        &:nth-child(3) a{
+          background: $catalog-color;
+        }
+        &:nth-child(4) a{
+          background: $extensions-color;
+        }
+        &:nth-child(5) a{
+          background: $sales-color;
+        }
+        &:nth-child(6) a{
+          background: $dark-color;
+        }
+        &:nth-child(7) a{
+          background: $reports-color;
+        }
+        &:nth-child(8) a{
+          background: $help-color;
+        }
+        
+
+          a {
+            display: block;
+            width: 100%;
+          }
+      }
+    }
+}
+.range {
+  margin-top: 5px;
+  margin-right: 4px;
+}
+
+.cke * { /* Fix the editor that's built with the default box model */
+  box-sizing: content-box;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea, select {
+  max-width: 100%;
+  min-width: 50px;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+@import "animations";
+@import "large-screens";
