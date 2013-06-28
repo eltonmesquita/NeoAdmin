@@ -1,6 +1,7 @@
 @import "variables";
 @import "fonts";
 @import "normalize";
+//@import "morris";
 @import "responsive-tables";
 @import "opencart";
 
@@ -38,7 +39,7 @@ body {
 #menu-left {
   padding: 0;
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: -$gutter;
   background: $bars-color;
   height: 60px;
@@ -87,7 +88,6 @@ nav a, nav a:visited {
 }
 
 nav {
-  
   ul {
     background: $lightest-color;
     list-style: none;
@@ -342,13 +342,30 @@ aside .div3 {
   margin-bottom: $gutter;
   position: relative;
   text-align: center;
-  
   @include radius-full;
-    [class*="icon-"] {
-      font-size: 3em;
-      color: $bars-color;
-    }
-  h5 {
+  @include main-transition;
+  [class*="icon-"] {
+    font-size: 3em;
+    color: $bars-color;
+    @include main-transition;
+  }
+  &:hover {
+    background: $sales-color;
+    color: #fff;
+  }
+  &:hover > [class*="icon-"] {
+    color: #fff;
+  }
+  a {
+    width: 100%;
+    height: 100px;
+    min-height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  p {
     font-size: 1em;
   }
 }
@@ -602,10 +619,12 @@ a.button, .list a.button {
 }
 
 .dashboard-heading {
-  background: $catalog-color;
+  background: $bars-color;
   font-size: 18px;
   padding: 0.45em;
+  @include radius-top;
 }
+
 
 #store {
   position: relative;

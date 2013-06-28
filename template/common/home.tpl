@@ -50,78 +50,45 @@
               <span><?php echo $total_sale; ?></span>
             </div>
             
-            <ul class="large-block-grid-4">
+            <ul class="large-block-grid-4 small-block-grid-1">
               <li>
                 <div class="dashboard-box client-approval">
+                  <a href="index.php?route=sale/customer&token=<?php echo $token; ?>" title=""></a>
                   <i class="icon-user"></i>
-                  <h5><?php echo $text_total_customer_approval; ?></h5>
+                  <p><?php echo $text_total_customer_approval; ?></p>
                   <span class="notification <?php echo $costumer_approval_notification ?>"><?php echo $total_customer_approval; ?></span>
                 </div>
               </li>
 
               <li>
                 <div class="dashboard-box comment-approval">
+                  <a href="index.php?route=catalog/review&token=<?php echo $token; ?>" title=""></a>
                   <i class="icon-bubbles"></i>
-                  <h5><?php echo $text_total_review_approval; ?></h5>
+                  <p><?php echo $text_total_review_approval; ?></p>
                   <span class="notification <?php echo $review_approval_notification ?>"><?php echo $total_review_approval; ?></span>
                 </div>
               </li>
 
               <li>
                 <div class="dashboard-box affiliate-approval">
+                  <a href="index.php?route=sale/affiliate&token=<?php echo $token; ?>" title=""></a>
                   <i class="icon-address-book"></i>
-                  <h5><?php echo $text_total_affiliate_approval; ?></h5>
+                  <p><?php echo $text_total_affiliate_approval; ?></p>
                   <span class="notification <?php echo $affiliate_approval_notification ?>"><?php echo $total_affiliate_approval; ?></span>
                 </div>
               </li>
               
               <li>
                 <div class="dashboard-box sales-year">
+                  <a href="index.php?route=sale/order&token=<?php echo $token; ?>" title=""></a>
                   <i class="icon-coin"></i>
-                  <h5><?php echo $text_total_sale_year; ?></h5>
-                  <span><?php echo $total_sale_year; ?></span>
+                  <p><?php echo $text_total_sale_year; ?><br>
+                  <span><?php echo $total_sale_year; ?></span></p>
                 </div>
               </li>
               
             </ul>
 
-          <!--<div class="dashboard-heading"><?php echo $text_overview; ?></div>
-          <div class="dashboard-content">
-            <table>
-              <tr>
-                <td><?php echo $text_total_sale; ?></td>
-                <td><?php echo $total_sale; ?></td>
-              </tr>
-              <tr>
-                <td><?php echo $text_total_sale_year; ?></td>
-                <td><?php echo $total_sale_year; ?></td>
-              </tr>
-              <tr>
-                <td><?php echo $text_total_order; ?></td>
-                <td><?php echo $total_order; ?></td>
-              </tr>
-              <tr>
-                <td><?php echo $text_total_customer; ?></td>
-                <td><?php echo $total_customer; ?></td>
-              </tr>
-              <tr>
-                <td><?php echo $text_total_customer_approval; ?></td>
-                <td><?php echo $total_customer_approval; ?></td>
-              </tr>
-              <tr>
-                <td><?php echo $text_total_review_approval; ?></td>
-                <td><?php echo $total_review_approval; ?></td>
-              </tr>
-              <tr>
-                <td><?php echo $text_total_affiliate; ?></td>
-                <td><?php echo $total_affiliate; ?></td>
-              </tr>
-              <tr>
-                <td><?php echo $text_total_affiliate_approval; ?></td>
-                <td><?php echo $total_affiliate_approval; ?></td>
-              </tr>
-            </table>
-          </div>-->
         </div>
         <div class="large-6 statistic columns">
           <div class="range"><?php echo $entry_range; ?>
@@ -134,7 +101,7 @@
           </div>
           <div class="dashboard-heading"><?php echo $text_statistics; ?></div>
           <div class="dashboard-content">
-            <div id="report" style="width: 390px; height: 170px; margin: auto;"></div>
+            <div id="report" style="width: 100%; max-width: 100%; height: 170px; margin: auto;"></div>
           </div>
         </div>
       </div>
