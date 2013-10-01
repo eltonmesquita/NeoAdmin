@@ -168,3 +168,5 @@ pip-log.txt
 ###########################3
 #SCSS Cache
 .sass-cache/
+.javascript/.jquery
+.javascript/.ckeditor
