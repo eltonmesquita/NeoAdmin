@@ -101,7 +101,7 @@
           </div>
           <div class="dashboard-heading"><?php echo $text_statistics; ?></div>
           <div class="dashboard-content">
-            <div id="report" style="width: 100%; max-width: 100%; height: 170px; margin: auto;"></div>
+            <div id="report" style="width: 100%; max-width: 100%; height: 212px; margin: auto;"></div>
           </div>
         </div>
       </div>

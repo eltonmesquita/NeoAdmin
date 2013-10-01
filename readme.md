@@ -1,9 +1,6 @@
-///////////////////////////////////////////////////////////
-/---------------------------------------------------------/
-/- NeoAdmin - Admin Template for Opencart                -/
-/- by Intersect - http://intersect.com.br               -/
-/---------------------------------------------------------/
-///////////////////////////////////////////////////////////
+
+# NeoAdmin - Admin Template for Opencart
+## by Intersect - http://intersect.com.br
 
 This template is made as an alternative to the original Admin Template from Opecart [www.opencart.com].
 The idea is to have a more intuitive and pleasure experience managing a Opencart store.
@@ -35,9 +32,12 @@ Soon we'll make it avaliable at GitHub.
 
 HISTORY
 
+0.03b - New Dashboard.
+	  - Fixed some bugs in the menu.
+
 0.02b - Fixed some problems with menu.
       - Fixed problems with some buttons.
       - Some code clean up.
-      - Partial conversion to SCSS/Sass
+      - Partial conversion to SCSS/Sass.
 
-0.01b - First public beta
+0.01b - First public beta.
