@@ -1,6 +1,6 @@
 
 # NeoAdmin - Admin Template for Opencart
-## by Intersect - http://intersect.com.br
+## by Elton Mesquita - http://intersect.com.br
 
 This template is made as an alternative to the original Admin Template from Opecart [www.opencart.com].
 The idea is to have a more intuitive and pleasant experience managing a Opencart store.
@@ -8,7 +8,7 @@ This template has been developed using the Zurb's Foundation Framework [http://f
 
 It was made only for the 1.5.5.1 version.
 
-THIS IS A BETA! USE IT IN YOUR OWN RISK!!! IT'S NOT A GOOD IDEA TO USE IT IN PRODUCTION STORES YET.
+**THIS IS A BETA! USE IT IN YOUR OWN RISK!!! IT'S NOT A GOOD IDEA TO USE IT IN PRODUCTION STORES YET.**
 
 You can use and modify it as you wish in non-profit and commercial works. You CAN'T say it was made for you or sell it.
 
@@ -26,7 +26,7 @@ With some minor adjustments those vQmods shall work.
 ## SUPPORT
 
 This software is distributed as it is and no one can be held responsable for any damage caused by it. Besides it, there's no supporte involved.
-Any problem, bug, sugestion, feedback or if you want to contribute to this project in some form, please use github: .
+Any problem, bug, sugestion, feedback or if you want to contribute to this project in some form, please use github: https://github.com/eltonmesquita/NeoAdmin.
 
 
 ## HISTORY
