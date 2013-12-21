@@ -1,6 +1,5 @@
-
 # NeoAdmin - Admin Template for Opencart
-## by Elton Mesquita - http://intersect.com.br
+## by Elton Mesquita - http://paranoidrobot.com
 
 This template is made as an alternative to the original Admin Template from Opecart [www.opencart.com].
 The idea is to have a more intuitive and pleasant experience managing a Opencart store.
